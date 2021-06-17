@@ -5,6 +5,7 @@
     "version": "0.2.0",
     "configurations": [
 
+
         {
             "name": "Python: Django",
             "type": "python",
@@ -12,7 +13,8 @@
             "program": "${workspaceFolder}\\manage.py",
             "args": [
                 "runserver",
-                "8006"
+                "8006",
+                "--noreload"
             ],
             "django": true
         }

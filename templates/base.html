@@ -1,0 +1,109 @@
+{% if user.is_authenticated %}
+<!DOCTYPE html>
+<html lang="fr" class="no-js" dir="rtl" class="text-right" > 
+{% load static %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>{% block title %}Payvast Karposhe{% endblock %}</title>
+
+    {% block link %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'karposhe/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'karposhe/css/font-awesome.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'karposhe/datatable/datatables.min.css' %}" />
+
+
+    <script src="{% static 'karposhe/js/jquery-3.5.1.slim.min.js' %}" ></script>
+    <script src="{% static 'karposhe/js/popper.min.js' %}" ></script>
+    <script src="{% static 'karposhe/js/bootstrap.min.js' %}" ></script>
+    <script src="{% static 'karposhe/datatable/datatables.min.js' %}" ></script>
+
+    <!-- start date picker   -->
+    <link href="{% static 'karposhe/persianDatepicker/css/normalize.css' %}" rel='stylesheet' />
+    <link href="{% static 'karposhe/persianDatepicker/css/fontawesome/css/font-awesome.min.css' %}" rel='stylesheet' />
+    <link href="{% static 'karposhe/persianDatepicker/css/vertical-responsive-menu.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'karposhe/persianDatepicker/css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'karposhe/persianDatepicker/css/prism.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'karposhe/persianDatepicker/css/persianDatepicker-default.css' %}" />
+    <link rel="stylesheet" href="{% static 'karposhe/persianDatepicker/css/persianDatepicker-dark.css' %}" />
+    <link rel="stylesheet" href="{% static 'karposhe/persianDatepicker/css/persianDatepicker-latoja.css' %}" />
+    <link rel="stylesheet" href="{% static 'karposhe/persianDatepicker/css/persianDatepicker-melon.css' %}" />
+    <link rel="stylesheet" href="{% static 'karposhe/persianDatepicker/css/persianDatepicker-lightorang.css' %}" />
+    <script src="{% static 'karposhe/persianDatepicker/js/prism.js' %}"></script>
+    <script src="{% static 'karposhe/persianDatepicker/js/vertical-responsive-menu.min.js' %}"></script>
+    <script src="{% static 'karposhe/persianDatepicker/js/persianDatepicker.min.js' %}"></script>
+    <script>
+         $(".datepicker").persianDatepicker({ 
+            theme: "latoja",
+            formatDate: "YYYY-0M-0D"
+        }); //put this on ready js if that page need datepicker
+    </script>
+    <style>
+        @font-face {
+            font-family: 'BNazanin';
+            src: url('?view'),
+                src: url("{% static 'karposhe/fonts/BNazanin.eot?view#iefix") format('embedded-opentype'),
+                url("{% static 'karposhe/fonts/BNazanin.woff?view") format('woff'),
+                url("{% static 'karposhe/fonts/BNazanin.ttf?view") format('truetype');
+        }
+    
+        body {
+            font-family: BNazanin;
+        }
+    </style>
+    <!-- end date picker  -->
+
+ 
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'karposhe/img/Payvast.jfif' %}" />
+
+
+
+
+    {% endblock %}
+
+
+
+
+
+</head>
+
+<body class="tdStyle BNazanin enable-responsive-font-sizes"  lang="fa">
+    {% block header %}
+    <div class="navbar" style="background-color: rgb(170, 170, 170);">
+
+        <div class="topnav-left" >
+            <a href="/admin/" target="_blank" title="مدیریت کاربران" style="padding: 0 2px 0px 2PX;">
+                <button class="rounded border-0" style="background-color: rgb(51, 178, 201);"><i class="fa fa-users fa-2x text-secondary" ></i></button>
+            </a>
+
+
+            <a href="/logout_view/" title="خروج" style="padding: 0 2px 0px 2PX; ">
+                <button class="rounded border-0" style="background-color: rgb(51, 178, 201);"><i class="fa fa-close fa-2x  text-secondary"></i></button>
+
+            </a>
+        </div>
+
+    </div>
+
+    {% endblock %}
+
+
+    <div class="container-fluid">
+        {% block content %}
+
+       
+        {% endblock %}
+    </div>
+
+
+    {% block footer %}
+
+
+    {% endblock %}
+
+</body>
+
+</html>
+{% endif %}

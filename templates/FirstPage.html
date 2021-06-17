@@ -1,0 +1,31 @@
+{% extends "./base.html" %}
+
+
+
+{% load static %}
+
+{% block content %}
+
+<script>
+    $(document).ready(function () {
+
+
+        $(".datepicker").persianDatepicker({
+            theme: "latoja",
+            formatDate: "YYYY/0M/0D",
+            cellWidth: 40,
+            cellHeight: 25,
+            shortDowTitle: ["ش", "ی", "د", "س", "چ", "پ", "ج"],
+            fontSize: 12
+        });
+
+
+    });
+</script>
+
+<h1 class="text-center font-weight-bold">ارسال فیش حقوقی به سیستم کارپوشه ملی ایران</h1>
+
+Hello World
+
+
+{% endblock %}

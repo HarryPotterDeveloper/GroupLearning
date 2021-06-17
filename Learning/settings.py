@@ -58,7 +58,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, '/templates/')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['.'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -87,7 +87,7 @@ DATABASES = {
         'PORT': '1433',
 
         'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',
+            'driver': 'ODBC Driver 13 for SQL Server',
         },
     },
 }
@@ -120,7 +120,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'fa'
+LANGUAGE_CODE = 'fa-ir'
+LANGUAGES = (
+    ('fa-ir', ('Persian')),
+    ('en-us', ('English')),
+)
 
 TIME_ZONE = 'Asia/Tehran'
 
@@ -138,4 +142,6 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
+
 ]
+STATIC_ROOT = ('./')
