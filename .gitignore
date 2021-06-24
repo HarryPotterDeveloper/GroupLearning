@@ -5,7 +5,6 @@
 GroupLearning/__pycache__/*
 GroupLearning/__pycache__/*
 Learning/__pycache__/*
-GroupLearning/migrations/*
 venv/Include/*
 venv/Scripts/*
 venv/tcl/*
