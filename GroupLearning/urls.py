@@ -16,7 +16,7 @@ urlpatterns = [
     path('login/',Login),
     path('accounts/login/', Login),
     path('logout_view/', logout_view),
-    path('accounts/logout/', logout_view),
+    path('accounts/logout/', logout_view , name='logout'),
     
 
     path('FirstPageView/', FirstPageView, name='FirstPageView'),
