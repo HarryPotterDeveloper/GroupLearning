@@ -77,17 +77,25 @@ WSGI_APPLICATION = 'Learning.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'sql_server.pyodbc',
         'NAME': 'GroupLearning',
-        'USER': 'sa',
+        'USER': 'sa1',
         'PASSWORD': '1',
         'HOST': '127.0.0.1',
         'PORT': '1433',
 
         'OPTIONS': {
-            'driver': 'ODBC Driver 13 for SQL Server',
+            'driver': 'ODBC Driver 17 for SQL Server',
         },
     },
 }
