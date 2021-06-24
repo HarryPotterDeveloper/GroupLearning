@@ -16,4 +16,3 @@ venv/Lib/encodings
 venv/Lib/importlib
 venv/Lib/*.py
 venv/Lib/*.txt
-venv/Lib/site-packages/django/contrib/auth/migrations/*
